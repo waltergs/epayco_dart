@@ -27,7 +27,6 @@ class AuthRepositoryImpl implements IAuthRepository {
           'private_key': privateKey,
         }),
       );
-      print(response);
       final authResponse = AuthResponse.fromJson(response.data);
       return Right(authResponse);
     } catch (e) {

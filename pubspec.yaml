@@ -1,9 +1,7 @@
 name: epayco_flutter
 description: Epayco APIfy wrapper for Flutter.
 version: 0.0.2
-authors:
-  - "Enderson Vizcaino"
-# homepage:
+repository: https://github.com/EndersonPro/epayco_flutter
 
 environment:
   sdk: ">=3.0.5 <4.0.0"
