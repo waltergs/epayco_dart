@@ -1,5 +1,5 @@
-import 'package:epayco_flutter/data/models/document.dart';
-import 'package:epayco_flutter/domain/entities/api_responses/get_document_types_entity.dart';
+import 'package:epayco_dart/data/models/document.dart';
+import 'package:epayco_dart/domain/entities/api_responses/get_document_types_entity.dart';
 
 class GetDocumentTypes extends GetDocumentTypesEntity {
   GetDocumentTypes({

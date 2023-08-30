@@ -2,10 +2,10 @@ import 'dart:convert';
 
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
-import 'package:epayco_flutter/data/http/http.dart';
-import 'package:epayco_flutter/data/models/auth_response.dart';
-import 'package:epayco_flutter/domain/errors/failure.dart';
-import 'package:epayco_flutter/domain/repositories/auth_repository.dart';
+import 'package:epayco_dart/data/http/http.dart';
+import 'package:epayco_dart/data/models/auth_response.dart';
+import 'package:epayco_dart/domain/errors/failure.dart';
+import 'package:epayco_dart/domain/repositories/auth_repository.dart';
 
 class AuthRepositoryImpl implements IAuthRepository {
   @override

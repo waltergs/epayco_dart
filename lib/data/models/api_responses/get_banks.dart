@@ -1,5 +1,5 @@
-import 'package:epayco_flutter/data/models/bank.dart';
-import 'package:epayco_flutter/domain/entities/api_responses/get_banks_entity.dart';
+import 'package:epayco_dart/data/models/bank.dart';
+import 'package:epayco_dart/domain/entities/api_responses/get_banks_entity.dart';
 
 class GetBanksResponse extends GetBanksResponseEntity {
   GetBanksResponse({

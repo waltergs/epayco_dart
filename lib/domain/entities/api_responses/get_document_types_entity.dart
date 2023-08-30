@@ -1,4 +1,4 @@
-import 'package:epayco_flutter/domain/entities/document_entity.dart';
+import 'package:epayco_dart/domain/entities/document_entity.dart';
 
 class GetDocumentTypesEntity {
   final bool? success;

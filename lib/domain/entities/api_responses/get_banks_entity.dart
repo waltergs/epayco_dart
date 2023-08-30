@@ -1,4 +1,4 @@
-import 'package:epayco_flutter/domain/entities/bank_entity.dart';
+import 'package:epayco_dart/domain/entities/bank_entity.dart';
 
 abstract class GetBanksResponseEntity {
   final bool? success;

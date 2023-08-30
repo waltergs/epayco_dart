@@ -1,19 +1,15 @@
-name: epayco_flutter
-description: Epayco APIfy wrapper for Flutter.
-version: 0.0.2
-repository: https://github.com/EndersonPro/epayco_flutter
+name: epayco_dart
+description: Epayco APIfy wrapper for dart.
+version: 0.0.3
+repository: https://github.com/EndersonPro/epayco_dart
 
 environment:
   sdk: ">=3.0.5 <4.0.0"
-  flutter: ">=1.17.0"
 
 dependencies:
   dartz: ^0.10.1
   dio: ^5.3.2
-  flutter:
-    sdk: flutter
 
 dev_dependencies:
-  flutter_test:
-    sdk: flutter
-  flutter_lints: ^2.0.0
+  lints: ^2.0.0
+  test: ^1.16.0
