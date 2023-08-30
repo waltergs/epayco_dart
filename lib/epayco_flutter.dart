@@ -1,8 +1,10 @@
 library epayco_flutter;
 
 import 'package:epayco_flutter/data/models/api_responses/get_banks.dart';
+import 'package:epayco_flutter/data/models/api_responses/get_document_types.dart';
 import 'package:epayco_flutter/data/models/auth_response.dart';
 import 'package:epayco_flutter/data/repositories/auth_repository.dart';
+import 'package:epayco_flutter/data/repositories/master_list_repository.dart';
 import 'package:epayco_flutter/data/repositories/pse_repository.dart';
 
 class EPayco {
@@ -34,6 +36,20 @@ class EPayco {
     return result.fold(
       (l) => throw l,
       (r) => r as GetBanksResponse,
+    );
+  }
+
+  Future<GetDocumentTypes?> getDocumentTypes() async {
+    assert(_token != null, """
+        token is null please call `getToken()`
+    """);
+    final masterListRepository = MasterListRepositoryImpl();
+    final result = await masterListRepository.getDocumentTypes(
+      token: _token!,
+    );
+    return result.fold(
+      (l) => throw l,
+      (r) => r,
     );
   }
 
