@@ -69,6 +69,14 @@ class EPayco {
     final sessiontRepository = SessionRepositoryImpl();
     final result = await sessiontRepository.getSession(
       token: _token!,
+      name: _name!,
+      invoice: _invoice!,
+      description: _description!,
+      currency: _currency!,
+      amount: _amount!,
+      country: _country!,
+      test: _test!,
+      ip: _ip!,
       
     );
     return result.fold(
