@@ -54,6 +54,20 @@ class EPayco {
     );
   }
 
+  Future<GetSession?> getSession() async {
+    assert(_token != null, """
+        token is null please call `getToken()`
+    """);
+    final sessiontRepository = SessionRepositoryImpl();
+    final result = await sessiontRepository.getSession(
+      token: _token!,
+    );
+    return result.fold(
+      (l) => throw l,
+      (r) => r,
+    );
+  }
+
   Future<AuthResponse> getToken() async {
     assert(_publicKey != null, """
         Public key is required please configure it
