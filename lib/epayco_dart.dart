@@ -12,6 +12,14 @@ class EPayco {
   String? _publicKey;
   String? _privateKey;
   String? _token;
+  String? _name;
+  String? _invoice;
+  String? _description;
+  String? _currency;
+  String? _amount;
+  String? _country;
+  String? _test;
+  String? _ip;
 
   EPayco._();
 
@@ -61,6 +69,7 @@ class EPayco {
     final sessiontRepository = SessionRepositoryImpl();
     final result = await sessiontRepository.getSession(
       token: _token!,
+      
     );
     return result.fold(
       (l) => throw l,
