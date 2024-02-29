@@ -11,19 +11,32 @@ class SessionRepositoryImpl implements IAuthRepository {
   @override
   Future<Either<Failure, AuthResponse>> getJWTToken({
     required String token,
+    required String name,
+    required String invoice,
+    required String description,
+    required String currency,
+    required String amount,
+    required String country,
+    required String test,
+    required String ip,
   }) async {
-    try {
-      final authorization = base64Encode(utf8.encode('$publicKey:$privateKey'));
+    try {     
       final response = await httpClient.post(
-        '/login',
+        '/payment/session/create',
         options: Options(
           headers: {
-            'Authorization': 'Basic $authorization',
+            'Authorization': 'Bearer $token',
           },
         ),
-        data: jsonEncode({
-          'public_key': publicKey,
-          'private_key': privateKey,
+        data: jsonEncode({          
+          'name': name,
+          'invoice': invoice,
+          'description': description,
+          'currency': currency,
+          'amount': amount,
+          'country': country,
+          'test': test,
+          'ip': ip
         }),
       );
       final authResponse = AuthResponse.fromJson(response.data);
